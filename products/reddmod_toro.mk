@@ -1,5 +1,5 @@
 $(call inherit-product, device/samsung/toro/full_toro.mk)
-$(call inherit-product, vendor/RootzBoat/products/common.mk)
+$(call inherit-product, vendor/pax/products/common.mk)
 
 PRODUCT_NAME := reDDMod_toro
 PRODUCT_BRAND := Google
