@@ -1,1 +1,1 @@
-add_lunch_combo reDDMod_toro-userdebug
+add_lunch_combo reDDrom_toro-userdebug

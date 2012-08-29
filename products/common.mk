@@ -1,5 +1,5 @@
-PRODUCT_NAME := reDDMod
-PRODUCT_BRAND := reDDMod
+PRODUCT_NAME := reDDrom
+PRODUCT_BRAND := reDDrom
 PRODUCT_DEVICE := generic
 
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -13,7 +13,7 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     Stk 
 #    QuickDash \
-    Wallpapers
+#    Wallpapers
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
@@ -38,6 +38,20 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES +=  \
     vendor/pax/prebuilt/common/ssh:system/xbin/ssh
 
+# Holo Launcher HD
+PRODUCT_COPY_FILES +=  \
+    vendor/pax/prebuilt/common/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk
+
+# Browser
+PRODUCT_COPY_FILES +=  \
+    vendor/pax/prebuilt/common/Browser.apk:system/app/Browser.apk
+
+# ringtones, notifications and alarms
+PRODUCT_COPY_FILES += \
+    vendor/pax/prebuilt/common/Matrix_Phone.ogg:system/media/audio/ringtones/Matrix_Phone.ogg \
+    vendor/pax/prebuilt/common/Coding.ogg:system/media/audio/notifications/Coding.ogg \
+    vendor/pax/prebuilt/common/Buzzer_Alarm.ogg:system/media/audio/alarms/Buzzer_Alarm.ogg
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
@@ -45,9 +59,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.setupwizard.enterprise_mode=1 \
-    ro.config.ringtone=Girtab.ogg \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg \
-    ro.modversion=reDDMod-b.411-1 \
+    ro.config.ringtone=Matrix_Phhone.ogg \
+    ro.config.notification_sound=Coding.ogg \
+    ro.config.alarm_alert=Buzzer_Alarm.ogg \
+    ro.modversion=reDDrom-b.411-1 \
     ro.kernel.android.checkjni=0 \
     windowsmgr.max_events_per_sec=240
