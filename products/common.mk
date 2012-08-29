@@ -8,6 +8,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 PRODUCT_PACKAGES += \
+    ROMControl \
+	ThemeManager \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
