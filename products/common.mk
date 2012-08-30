@@ -8,14 +8,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 PRODUCT_PACKAGES += \
-    ROMControl \
+    Browser \
+	ThemeChooser \
 	ThemeManager \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
-    Stk 
-#    QuickDash \
-#    Wallpapers
+    Stk
+#    ROMControl
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
     vendor/pax/prebuilt/common/Buzzer_Alarm.ogg:system/media/audio/alarms/Buzzer_Alarm.ogg
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=290 \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.android.dataroaming=false \
@@ -64,6 +65,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Matrix_Phhone.ogg \
     ro.config.notification_sound=Coding.ogg \
     ro.config.alarm_alert=Buzzer_Alarm.ogg \
-    ro.modversion=reDDrom-411-build-1.1 \
+    ro.modversion=reDDrom-411-build-1.3 \
     ro.kernel.android.checkjni=0 \
     windowsmgr.max_events_per_sec=240
