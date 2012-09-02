@@ -9,12 +9,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 PRODUCT_PACKAGES += \
     Browser \
-	ThemeChooser \
-	ThemeManager \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
-    Stk
+    Stk \
+	Mms \
+	Wallpapers
+#    ThemeChooser
+#    ThemeManager
 #    ROMControl
 
 PRODUCT_COPY_FILES += \
@@ -62,9 +64,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.setupwizard.enterprise_mode=1 \
-    ro.config.ringtone=Matrix_Phhone.ogg \
+    ro.config.ringtone=Matrix_Phone.ogg \
     ro.config.notification_sound=Coding.ogg \
     ro.config.alarm_alert=Buzzer_Alarm.ogg \
-    ro.modversion=reDDrom-411-build-1.3 \
+    ro.modversion=reDDrom-411-build-1.5 \
     ro.kernel.android.checkjni=0 \
     windowsmgr.max_events_per_sec=240
