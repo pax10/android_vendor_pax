@@ -67,6 +67,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Matrix_Phone.ogg \
     ro.config.notification_sound=Coding.ogg \
     ro.config.alarm_alert=Buzzer_Alarm.ogg \
-    ro.modversion=reDDrom-411-build-1.5 \
+    ro.modversion=reDDrom-411-build-1.6 \
     ro.kernel.android.checkjni=0 \
     windowsmgr.max_events_per_sec=240
