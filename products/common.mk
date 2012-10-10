@@ -6,6 +6,16 @@ PRODUCT_DEVICE := generic
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
+# T-Mobile theme engine
+include vendor/pax/configs/themes_common.mk
+
+PRODUCT_PACKAGES += \
+    DSPManager \
+    libcyanogen.dsp \
+    audio_effects.conf \
+    Wallpapers \
+    ROMControl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
@@ -75,4 +85,8 @@ endif
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+PRODUCT_PACKAGES += \
+    vim \
+    htop
 
