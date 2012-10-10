@@ -88,6 +88,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 PRODUCT_PACKAGES += \
+    openvpn \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    libssh \
+    ssh \
+    sshd \
+    sshd-config \
+    ssh-keygen \
+    sftp \
+    scp \
     vim \
     htop
 
