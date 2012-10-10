@@ -1,14 +1,13 @@
 # Inherit common tuff
-$(call inherit-product, vendor/aka/configs/common.mk)
+$(call inherit-product, vendor/pax/products/common.mk)
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/aka/overlay/common_tablets_small
+PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common_tablets_small
 
 PRODUCT_PACKAGES += \
-    HoloLauncherHD \
 	NovaLauncher
 
 # Inherit drm blobs
--include vendor/aka/configs/common_drm_tablet.mk
+-include vendor/pax/products/common_drm_tablet.mk
 
 # BT config
 PRODUCT_COPY_FILES += \
