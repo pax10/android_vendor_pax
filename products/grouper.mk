@@ -4,6 +4,8 @@ $(call inherit-product, device/asus/grouper/full_grouper.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/pax/products/common.mk)
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common_tablets_small
+
 # Setup device specific product configuration.
 PRODUCT_NAME := pax_grouper
 PRODUCT_BRAND := google

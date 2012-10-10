@@ -7,7 +7,7 @@ PRODUCT_DEVICE := generic
 PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 # T-Mobile theme engine
-include vendor/pax/configs/themes_common.mk
+include vendor/pax/products/themes_common.mk
 
 PRODUCT_PACKAGES += \
     DSPManager \
@@ -26,7 +26,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/pax/proprietary/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
     vendor/pax/proprietary/common/app/Calendar.apk:system/app/Calendar.apk \
     vendor/pax/proprietary/common/app/Chrome.apk:system/app/Chrome.apk \
     vendor/pax/proprietary/common/app/Gmail.apk:system/app/Gmail.apk \
@@ -72,7 +71,9 @@ ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += \
     vendor/pax/proprietary/common/app/Gallery2.apk:system/app/Gallery2.apk \
     vendor/pax/proprietary/common/app/Music.apk:system/app/Music.apk \
-    vendor/pax/proprietary/common/app/YouTube.apk:system/app/YouTube.apk
+    vendor/pax/proprietary/common/app/YouTube.apk:system/app/YouTube.apk \
+    vendor/pax/proprietary/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
+
 endif
 
 ifneq ($(filter pax_crespo pax_crespo4g pax_maguro pax_toro pax_toroplus pax_grouper,$(TARGET_PRODUCT)),)
