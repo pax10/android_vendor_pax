@@ -18,6 +18,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.setupwizard.enterprise_mode=1
 
+PRODUCT_PACKAGES += \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf \
+    Wallpapers
+
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
     vendor/pax/proprietary/common/app/Books:system/app/Books.apk \
