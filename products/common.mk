@@ -8,7 +8,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 
 # T-Mobile theme engine
-include vendor/aokp/configs/themes_common.mk
+include vendor/pax/products/themes_common.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
