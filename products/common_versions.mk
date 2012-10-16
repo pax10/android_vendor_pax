@@ -3,6 +3,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-bui
 
 # Rom Manager properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=type0-$(shell date +"%m-%d-%y") \
-    ro.rommanager.developerid=pax10
+    ro.modversion=Zer0-$(shell date +"%m-%d-%y") \
+    ro.rommanager.developerid=pax
 
