@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
 
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/pax/proprietary/common/app/Books:system/app/Books.apk \
     vendor/pax/proprietary/common/app/BrowserGoogle.apk:system/app/BrowserGoogle.apk \
     vendor/pax/proprietary/common/app/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
     vendor/pax/proprietary/common/app/CalendarProvider.apk:system/app/CalendarProvider.apk \
@@ -46,7 +45,6 @@ PRODUCT_COPY_FILES += \
     vendor/pax/proprietary/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/pax/proprietary/common/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
     vendor/pax/proprietary/common/app/GmsCore.apk:system/app/GmsCore.apk \
-    vendor/pax/proprietary/common/app/LatinIMEDictionaryPack.apk:system/app/LatinIMEDictionaryPack.apk \
     vendor/pax/proprietary/common/app/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
     vendor/pax/proprietary/common/app/Magazines.apk:system/app/Magazines.apk \
     vendor/pax/proprietary/common/app/Maps.apk:system/app/Maps.apk \
@@ -70,7 +68,7 @@ PRODUCT_COPY_FILES += \
     vendor/pax/proprietary/common/etc/updatecmds/google_generic_update.txt:system/etc/updatecmds/google_generic_update.txt \
     vendor/pax/proprietary/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     vendor/pax/proprietary/common/lib/libchromeview.so:system/lib/libchromeview.so \
-    vendor/pax/proprietary/common/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
+    vendor/pax/proprietary/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/pax/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
     vendor/pax/proprietary/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so \
     vendor/pax/proprietary/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
@@ -86,10 +84,11 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_BUILD_VARIANT),user)
 # Blobs common to all devices except emulator
 PRODUCT_COPY_FILES += \
-    vendor/pax/proprietary/common/app/GoogleGallery.apk:system/app/GoogleGallery.apk \
     vendor/pax/proprietary/common/app/Music2.apk:system/app/Music.apk \
     vendor/pax/proprietary/common/app/YouTube.apk:system/app/YouTube.apk
 endif
+# vendor/pax/proprietary/common/app/GoogleGallery.apk:system/app/GoogleGallery.apk
+# \
 
 ifneq ($(filter pax_crespo pax_crespo4g pax_maguro pax_toro pax_toroplus pax_grouper,$(TARGET_PRODUCT)),)
 # Blobs common to all devices except emulator and tablets
