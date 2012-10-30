@@ -5,7 +5,7 @@ $(call inherit-product, device/asus/grouper/full_grouper.mk)
 $(call inherit-product, vendor/pax/products/common.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := pax_grouper
+PRODUCT_NAME := raum-zero_grouper
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := grouper
 PRODUCT_MODEL := Nexus 7

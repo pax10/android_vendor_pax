@@ -54,6 +54,7 @@ PRODUCT_COPY_FILES += \
     vendor/pax/proprietary/common/app/PartnerBookmarksProvider.apk:system/app/PartnerBookmarksProvider.apk \
     vendor/pax/proprietary/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/pax/proprietary/common/app/PlusOne.apk:system/app/PlusOne.apk \
+    vendor/pax/proprietary/common/app/SolidExplorer.apk:system/app/SolidExplorer.apk \
     vendor/pax/proprietary/common/app/Street.apk:system/app/Street.apk \
     vendor/pax/proprietary/common/app/SuperSU.apk:system/app/SuperSU.apk \
     vendor/pax/proprietary/common/app/TagGoogle.apk:system/app/TagGoogle.apk \

@@ -1,8 +1,10 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
-# Rom Manager properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Zer0-$(shell date +"%m-%d-%y") \
-    ro.rommanager.developerid=pax
+RAUM_BUILD=b-0.1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=pax10 \
+    ro.goo.rom=raum-zero \
+    ro.goo.version=raum-$(RAUM_BUILD) \
+    ro.modversion=$(TARGET_PRODUCT)-412-build-$(RAUM_BUILD)
