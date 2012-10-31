@@ -5,7 +5,7 @@ $(call inherit-product, device/samsung/toro/full_toro.mk)
 $(call inherit-product, vendor/pax/products/common.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := raum-zero_toro
+PRODUCT_NAME := pax_toro
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := toro
 PRODUCT_MODEL := Galaxy Nexus
