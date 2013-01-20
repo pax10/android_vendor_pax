@@ -79,7 +79,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := AdobeFlashPlayer
-LOCAL_MODULE_OWNER := redd
+LOCAL_MODULE_OWNER := pax
 LOCAL_SRC_FILES := common/app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
@@ -89,7 +89,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := SolidExlporer 
-LOCAL_MODULE_OWNER := redd
+LOCAL_MODULE_OWNER := pax
 LOCAL_SRC_FILES := common/app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
@@ -100,7 +100,7 @@ include $(BUILD_PREBUILT)
 # VZW
 include $(CLEAR_VARS)
 LOCAL_MODULE := MyVerizon
-LOCAL_MODULE_OWNER := redd
+LOCAL_MODULE_OWNER := pax
 LOCAL_SRC_FILES := vzw/app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
@@ -110,7 +110,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := VerizonSSO
-LOCAL_MODULE_OWNER := redd
+LOCAL_MODULE_OWNER := pax
 LOCAL_SRC_FILES := vzw/app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
@@ -120,7 +120,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := VZWBackupAssistance
-LOCAL_MODULE_OWNER := redd
+LOCAL_MODULE_OWNER := pax
 LOCAL_SRC_FILES := vzw/app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
