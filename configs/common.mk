@@ -7,16 +7,18 @@ PRODUCT_PACKAGES += \
     Microbes \
     NovaLauncher \
     ROMControl \
-    SuperSU \
     Torch \
     AdobeFlashPlayer \
     SolidExplorer \
     TricksterMod \
-    raumLauncher
+    raumLauncher \
+    raumSecurity
+# SuperSU
 
 # Use prebuilt su until fixed when built
 PRODUCT_COPY_FILES += \
     vendor/pax/prebuilt/common/xbin/7za:system/xbin/7za \
+    vendor/pax/prebuilt/common/lib/liblbesec.so:system/lib/liblbesec.so \
     vendor/pax/prebuilt/common/xbin/su:system/xbin/su
 
 PRODUCT_PROPERTY_OVERRIDES += \
