@@ -1,0 +1,51 @@
+#!/bin/bash -
+# bash script for creating signed flashable gapps
+#
+# signapk - http://code.google.com/p/signapk/
+SIGNAPK="$HOME/bin/signapk.jar"
+# android system base
+ABASE=`pwd`
+# security directory in buid tree
+SDIR="$ABASE/build/target/product/security"
+# platform keys
+PFPEM="$SDIR/platform.x509.pem"
+PFKEY="$SDIR/platform.pk8"
+# test keys
+TPEM="$SDIR/testkey.x509.pem"
+TKEY="$SDIR/testkey.pk8"
+
+# get date
+DATE=$(date +%Y%m%d)
+# gapps dir
+GAPPS="$ABASE/vendor/pax/prebuilt/gapps"
+OUT="$ABASE/out/gapps"
+
+# cd to gapps
+cd $GAPPS
+
+# delete old pkg if exist
+if [ -f $OUT/*.zip ]; then
+    echo "deleting olg pkg"
+    rm $OUT/*.zip
+fi
+
+# if all ok sign googbakuptrnprt
+if [ -f $SIGNAPK ] && [ -f $PFPEM ] && [ -f $PFKEY ]; then
+    echo "Signing GoogleBackupTransport.apk"
+    java -jar $SIGNAPK $PFPEM $PFKEY system/app/GoogleBackupTransport.apk system/app/GoogleBackupTransport.signed.apk
+    mv system/app/GoogleBackupTransport.signed.apk system/app/GoogleBackupTransport.apk
+fi
+
+# make zip
+echo "making gapps-pkg"
+zip -q -9 -r raum00_gapps-jb-421-${DATE}-unsigned.zip . -i META-INF system
+
+# if all ok sign gapps
+if [ -f $SIGNAPK ] && [ -f $TPEM ] && [ -f $TKEY ]; then
+    echo "signing gapps"
+    mkdir -p $OUT
+    java -jar $SIGNAPK $TPEM $TKEY gapps-jb-421-$DATE-unsigned.zip $OUT/gapps-jb-421-$DATE-signed.zip
+    rm gapps-jb-421-$DATE-unsigned.zip
+    echo "a flashed gapps-pkg is ready.."
+fi
+

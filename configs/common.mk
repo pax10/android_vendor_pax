@@ -49,6 +49,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/pax/config/permissions/com.raum.android.xml:system/etc/permissions/com.raum.android.xml
+
 PRODUCT_PACKAGES += \
     openvpn \
     e2fsck \
@@ -80,6 +83,9 @@ PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallp
 
 # Inherit common build.prop overrides
 -include vendor/pax/configs/common_versions.mk
+
+# Inherit Face lock security blobs
+-include vendor/pax/configs/common_facelock.mk
 
 # T-Mobile theme engine
 -include vendor/pax/configs/themes_common.mk
