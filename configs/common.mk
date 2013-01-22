@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 PRODUCT_COPY_FILES += \
-    vendor/pax/config/permissions/com.raum.android.xml:system/etc/permissions/com.raum.android.xml
+    vendor/pax/prebuilt/common/etc/permissions/com.raum.android.xml:system/etc/permissions/com.raum.android.xml
 
 PRODUCT_PACKAGES += \
     openvpn \
