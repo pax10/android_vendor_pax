@@ -11,6 +11,7 @@ PRODUCT_PACKAGES += \
     AdobeFlashPlayer \
     SolidExplorer \
     TricksterMod \
+    raumWPs \
     raumLauncher \
     raumSecurity
 # SuperSU
