@@ -1,9 +1,9 @@
 # Media/Audio
 PRODUCT_COPY_FILES += \
-    prebuilt/common/media/audio/notifications/Evil.Sound.mp3:system/media/audio/notifications/Evil.Sound.mp3 \
-    prebuilt/common/media/audio/ringtones/Demon.Voices.mp3:system/media/audio/ringtones/Demon.Voices.mp3 \
-    prebuilt/common/media/audio/ringtones/Yo.Phone.Is.Ringing.mp3:system/media/audio/ringtones/Yo.Phone.Is.Ringing.mp3 \
-    prebuilt/common/media/boot_audio.mp3:system/media/boot_audio.mp3
+    vendor/pax/prebuilt/common/media/audio/notifications/Evil.Sound.mp3:system/media/audio/notifications/Evil.Sound.mp3 \
+    vendor/pax/prebuilt/common/media/audio/ringtones/Demon.Voices.mp3:system/media/audio/ringtones/Demon.Voices.mp3 \
+    vendor/pax/prebuilt/common/media/audio/ringtones/Yo.Phone.Is.Ringing.mp3:system/media/audio/ringtones/Yo.Phone.Is.Ringing.mp3 \
+    vendor/pax/prebuilt/common/media/boot_audio.mp3:system/media/boot_audio.mp3
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
