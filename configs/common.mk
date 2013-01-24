@@ -24,13 +24,22 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
+    ro.com.google.clientidbase=android-verizon \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.com.google.locationfeatures=1 \
     ro.setupwizard.enterprise_mode=1 \
+    ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+    ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
+    ro.gsm.data_retry_config=max_retries=infinite,default_randomization=2000,0,0,80000,125000,485000,905000 \
+    ro.gsm.2nd_data_retry_config=max_retries=infinite,default_randomization=2000,0,0,80000,125000,485000,905000 \
+    ro.cdma.otaspnumschema=SELC,1,80,99 \
+    ro.com.android.dataroaming=false \
     windowsmgr.max_events_per_sec=240 \
+    dalvik.vm.lockprof.threshold=500 \
+    wifi.supplicant_scan_interval=180 \
     ro.kernel.android.checkjni=0
+#    ro.com.google.clientidbase=android-google \
 
 PRODUCT_COPY_FILES += \
     vendor/pax/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
@@ -47,9 +56,7 @@ PRODUCT_COPY_FILES += \
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     vendor/pax/prebuilt/common/etc/permissions/com.raum.android.xml:system/etc/permissions/com.raum.android.xml
 
 PRODUCT_PACKAGES += \
@@ -73,10 +80,9 @@ PRODUCT_PACKAGES += \
     libncurses \
     vim
 
-# Default ringtone
+# Default notification/alarm
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Scarabaeus.ogg \
-    ro.config.notification_sound=Antimony.ogg \
+    ro.config.notification_sound=Evil.Sound.mp3 \
     ro.config.alarm_alert=Scandium.ogg
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml

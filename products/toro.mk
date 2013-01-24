@@ -4,6 +4,9 @@ $(call inherit-product, device/samsung/toro/full_toro.mk)
 # Inherit pax common bits
 $(call inherit-product, vendor/pax/configs/common.mk)
 
+# Inherit common phone files
+$(call inherit-product, vendor/pax/configs/common_phone.mk)
+
 # Inherit common Verizon Wireless Files
 $(call inherit-product, vendor/pax/configs/vzw.mk)
 
