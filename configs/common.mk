@@ -2,18 +2,19 @@
 PRODUCT_PACKAGE_OVERLAYS += vendor/pax/overlay/common
 
 PRODUCT_PACKAGES += \
+    AdobeFlashPlayer \
     AppWidgetPicker \
     LatinImeDictionaryPack \
     Microbes \
+    MusicFX \
     NovaLauncher \
-    ROMControl \
-    Torch \
-    AdobeFlashPlayer \
-    SolidExplorer \
-    TricksterMod \
-    raumWPs \
     raumLauncher \
-    raumSecurity
+    raumWPs \
+    raumSecurity \
+    ROMControl \
+    SolidExplorer \
+    Torch \
+    TricksterMod
 # SuperSU
 
 # Use prebuilt su until fixed when built
@@ -61,10 +62,10 @@ PRODUCT_COPY_FILES += \
     vendor/pax/prebuilt/common/etc/permissions/com.raum.android.xml:system/etc/permissions/com.raum.android.xml
 
 PRODUCT_PACKAGES += \
-    openvpn \
     e2fsck \
     mke2fs \
     tune2fs \
+    openvpn \
     libssh \
     ssh \
     sshd \
@@ -74,10 +75,10 @@ PRODUCT_PACKAGES += \
     scp
 
 PRODUCT_PACKAGES += \
+    bash \
+    busybox \
     DSPManager \
     libcyanogen-dsp \
-    busybox \
-    bash \
     libncurses \
     vim
 
