@@ -37,7 +37,7 @@ if [ -f $SIGNAPK ] && [ -f $PFPEM ] && [ -f $PFKEY ]; then
 fi
 
 # make zip
-echo "making gapps-pkg"
+echo "zipping gapps package"
 zip -q -9 -r raum00_gapps-jb-421-$DATE-unsigned.zip META-INF system
 
 # if all ok sign gapps
@@ -46,6 +46,7 @@ if [ -f $SIGNAPK ] && [ -f $TPEM ] && [ -f $TKEY ]; then
     mkdir -p $OUT
     java -jar $SIGNAPK $TPEM $TKEY raum00_gapps-jb-421-$DATE-unsigned.zip $OUT/raum00_gapps-jb-421-$DATE-signed.zip
     rm raum00_gapps-jb-421-$DATE-unsigned.zip
-    echo "a flashed gapps-pkg is ready.."
+    echo "a flashable gapps package is ready.."
+    echo -e "location: out/gapps/$(ls ${OUT})"
 fi
 
