@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
     libncurses \
     vim
 
-# Default notification/alarm
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Evil.Sound.mp3 \
     ro.config.alarm_alert=Scandium.ogg
