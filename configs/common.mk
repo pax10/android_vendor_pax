@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     Microbes \
     MusicFX \
-    NovaLauncher \
     raumLauncher \
     raumWPs \
     raumSecurity \
@@ -15,6 +14,7 @@ PRODUCT_PACKAGES += \
     SolidExplorer \
     Torch \
     TricksterMod
+# NovaLauncher
 # SuperSU
 
 # Use prebuilt su until fixed when built
