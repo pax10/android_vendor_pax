@@ -2,9 +2,9 @@
 PRODUCT_PACKAGES += \
     MyVerizon \
     VerizonSSO
-#    VZWBackupAssistant
-#    VZWAPNLib \
-#    VZWAPNService \
+    VZWBackupAssistant \
+    VZWAPNLib \
+    VZWAPNService 
 #    VZWBackupAssistant \
 #    VerizonSSO
 
