@@ -1,7 +1,7 @@
 #Permissions and Lib for Verizon Wireless Apps
 PRODUCT_PACKAGES += \
     MyVerizon \
-    VerizonSSO
+    VerizonSSO \
     VZWBackupAssistant \
     VZWAPNLib \
     VZWAPNService 
