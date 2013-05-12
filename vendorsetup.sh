@@ -1,2 +1,1 @@
-add_lunch_combo pax_toro-userdebug
-add_lunch_combo pax_grouper-userdebug
+add_lunch_combo raumzero_toro-userdebug
