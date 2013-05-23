@@ -4,6 +4,9 @@
 # common
 $(call inherit-product, vendor/raumzero/config/common.mk)
 
+# google apps
+$(call inherit-product, vendor/google/product/google.mk)
+
 # bluetooth
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
