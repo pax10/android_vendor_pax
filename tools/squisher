@@ -20,7 +20,7 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-        echo $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
+        echo "ERROR: $0 only works with a full build environment. $OUT should exist."
         exit 1
 fi
 
@@ -74,7 +74,7 @@ $SED -i \
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.raumzero\.version/s/^.*=//p' $OUT/system/build.prop`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
-echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+echo "MODVERSION: $MODVERSION"
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
 # Delete unnecessary binaries
@@ -118,7 +118,7 @@ printf "Zipping package..."
 echo
 printf "Signing package..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
-java -Xmx1024m \
+java -Xmx2048m \
         -jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
         -w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
         $REPACK/update.zip $OUTFILE
@@ -133,8 +133,8 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
-echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo "Package complete: $OUTFILE"
+echo "md5: $(cat $img.md5sum | awk '{ print $1 }')"
 echo
 )
 

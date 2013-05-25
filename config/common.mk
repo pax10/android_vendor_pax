@@ -44,21 +44,26 @@ PRODUCT_PACKAGES += \
     Camera \
     MusicFX \
     audio_effects.conf \
+    DSPManager \
+    libcyanogen-dsp \
     LiveWallpapers \
     LiveWallpapersPicker \
     PhotoTable \
     Torch \
     Superuser \
-    su
+    su \
+    busybox
 
 # raumzero
 PRODUCT_PACKAGES += \
     LatinIME \
-    Launcher2
+    Trebuchet \
+    FileManager
 
 # tools
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    SpeakerProximity
 
 PRODUCT_PACKAGES += \
     armzipalign \
@@ -83,7 +88,7 @@ PRODUCT_PACKAGES += \
     start-ssh
 
 # themes
-#include vendor/raumzero/config/theme_chooser.mk
+include vendor/raumzero/config/theme_chooser.mk
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/raumzero/overlay/dictionaries
