@@ -6,5 +6,5 @@ PRODUCT_PACKAGES += \
 
 # theme chooser
 PRODUCT_COPY_FILES += \
-       vendor/raumzero/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+       vendor/crossbones/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
