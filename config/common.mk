@@ -1,6 +1,10 @@
+#SUPERUSER_EMBEDDED := true                                          
+SUPERUSER_PACKAGE_PREFIX := com.crossbones.superuser
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-SUPERUSER_EMBEDDED := true
+# brand
+ PRODUCT_BRAND ?= Crossbones
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -95,6 +99,8 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     Welcome \
     GooManager \
+    rZLauncher \
+    rZWallpapers \
     FileManager
 
 # themes
@@ -104,21 +110,27 @@ include vendor/crossbones/config/theme_chooser.mk
 PRODUCT_PACKAGE_OVERLAYS += vendor/crossbones/overlay/common
 
 # Common ROM version
+RELEASE = false
 ROM_VERSION_MAJOR = 2
 ROM_VERSION_MINOR = 3
-ROM_VERSION_MAINTENANCE = 3
+ROM_VERSION_MAINTENANCE =3
+ROM_VERSION_TESTING = 5
+COMPILE_DATE = $(shell date +%b%d%Y)
 
-BUILD_VERSION = $(ROM_VERSION_MAJOR).$(ROM_VERSION_MINOR).$(ROM_VERSION_MAINTENANCE)
+ifeq ($(RELEASE),true)
+    BUILD_VERSION := $(ROM_VERSION_MAJOR).$(ROM_VERSION_MINOR).$(ROM_VERSION_MAINTENANCE)
+else
+    BUILD_VERSION := TEST.v$(ROM_VERSION_TESTING)
+endif
+
+CROSSBONES_VERSION=Crossbones-$(BUILD_VERSION)-$(COMPILE_DATE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Crossbones-$(BUILD_VERSION) \
-    ro.romversion=$(BUILD_VERSION) \
-    ro.goo.developerid=crossbones \
-    ro.goo.rom=Crossbones \
-    ro.goo.version=$(shell date +%s)
+  ro.crossbones.version=Crossbones-$(BUILD_VERSION)-$(COMPILE_DATE) \
+  ro.romversion=$(BUILD_VERSION)-$(COMPILE_DATE) \
+  ro.goo.developerid=crossbones \
+  ro.goo.rom=Crossbones \
+  ro.goo.version=$(shell date +%s)
 
 # Message displayed while flashing ROM
 PRODUCT_MOTD :="\n+-------------Crossbones ROM $(BUILD_VERSION)-------------+\n|--| http://xbones.org | support@xbones.org |--|\n|--| Follow: @Xbones_dev for news & updates |--|\n+----------------------------------------------+\n"
-
-
-
