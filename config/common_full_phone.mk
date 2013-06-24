@@ -7,3 +7,7 @@ PRODUCT_COPY_FILES += \
 
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+
+# Bravia3
+$(call inherit-product-if-exists, vendor/crossbones/config/bravia.mk) 
+
