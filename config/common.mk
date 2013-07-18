@@ -163,4 +163,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.version=$(shell date +%s)
 
 # MOTD displayed while flashing ROM
-PRODUCT_MOTD :="\n+--$(RAUMZERO_VERSION)--+\n Site: http://raum.mobileinfern.us\n Email: raumzero@mobileinfern.us\n Rom Builds: @ Dev-Host\n +-- http://d-h.st/users/MikereDD/ --+\n"
+PRODUCT_MOTD :="\n+------$(RAUMZERO_VERSION)------+\n|-| http://raum.mobileinfern.us | raumzero@mobileinfern.us |--|\n|--| Builds@Dev-Host http://d-h.st/users/MikereDD/ |--|\n+------+\n"
