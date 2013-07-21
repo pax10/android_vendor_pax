@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 
 # tools
 PRODUCT_PACKAGES += \
-	CellBroadcastReceiver
+	CellBroadcastReceiver \
+	SpareParts
 #    SpeakerProximity
 
 PRODUCT_PACKAGES += \
@@ -144,7 +145,7 @@ RELEASE = false
 ROM_VERSION_MAJOR = 1
 ROM_VERSION_MINOR = 1
 ROM_VERSION_MAINTENANCE = 4
-ROM_VERSION_TESTING = 5
+ROM_VERSION_TESTING = 6
 COMPILE_DATE = $(shell date +%b%d%Y)
 
 ifeq ($(RELEASE),true)
@@ -163,4 +164,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.version=$(shell date +%s)
 
 # MOTD displayed while flashing ROM
-PRODUCT_MOTD :="\n +---raumZero-TEST.v5-Jul182013----+\n|-|  http://raum.mobileinfern.us  |-|\n|-|    raumzero@mobileinfern.us   |-|\n|-|        Builds@Dev-Host        |-|\n|-| http://d-h.st/users/MikereDD/ |-|\n +---------------------------------+\n"
+PRODUCT_MOTD :="\n +----$(RAUMZERO_VERSION)----+\n|-|  http://raum.mobileinfern.us  |-|\n|-|    raumzero@mobileinfern.us   |-|\n|-|        Builds@Dev-Host        |-|\n|-| http://d-h.st/users/MikereDD/ |-|\n +---------------------------------+\n"
