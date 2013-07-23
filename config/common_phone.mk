@@ -1,5 +1,8 @@
-# common
+﻿# common
 $(call inherit-product, vendor/raumzero/config/common.mk)
+
+# bring in all video files
+$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
 # bravia3
 $(call inherit-product-if-exists, vendor/raumzero/config/bravia.mk)
@@ -18,10 +21,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
+# camera effects
+PRODUCT_COPY_FILES +=  \
+    vendor/raumzero/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/raumzero/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+
 # packages
 PRODUCT_PACKAGES += \
 	Mms \
-	Stk
+	Stk \
+	Torch
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \

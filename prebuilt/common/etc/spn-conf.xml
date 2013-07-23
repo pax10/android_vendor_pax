@@ -1,50 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spnOverrides version="1">
     <!-- Japan -->
     <spnOverride numeric="44020" spn="SoftBank" />
     <!-- Hong Kong -->
     <spnOverride numeric="45406" spn="SmarTone" />
     <spnOverride numeric="45412">
-        <spn locale="zh">中國移動香港</spn>
-        <spn locale="zh_CN">中国移动香港</spn>
+        <spn locale="zh">??????</spn>
+        <spn locale="zh_CN">??????</spn>
     </spnOverride>
     <!-- China -->
     <spnOverride numeric="46000">
-        <spn locale="zh">中国移动</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46001">
-        <spn locale="zh">中国联通</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46002">
-        <spn locale="zh">中国移动</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46003">
-        <spn locale="zh">中国电信</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46007">
-        <spn locale="zh">中国移动</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <!-- Taiwan -->
     <spnOverride numeric="46601">
-        <spn locale="zh">遠傳電信</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46688">
-        <spn locale="zh">和信電訊</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46689">
-        <spn locale="zh">威寶電信</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46692">
-        <spn locale="zh">中華電信</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46693">
-        <spn locale="zh">東信電訊</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="46697">
-        <spn locale="zh">台灣大哥大</spn>
+        <spn locale="zh">?????</spn>
     </spnOverride>
     <spnOverride numeric="46699">
-        <spn locale="zh">泛亞電信</spn>
+        <spn locale="zh">????</spn>
     </spnOverride>
     <spnOverride numeric="3100" spn="NEPW"/>
     <spnOverride numeric="3102" spn="NEPW"/>

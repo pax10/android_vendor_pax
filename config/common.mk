@@ -1,4 +1,4 @@
-# brand                  
+﻿# brand                  
 PRODUCT_BRAND ?= raumzero
 
 # use / build koush's Superuser
@@ -45,27 +45,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # packages
 PRODUCT_PACKAGES += \
 	Camera \
+	LatinIME \
 	MusicFX \
 	audio_effects.conf \
+	HoloSpiralWallpaper \
 	LiveWallpapers \
 	LiveWallpapersPicker \
-	PhotoTable \
+	MagicSmokeWallpapers \
+	PhotoTable
+
+# Optional packages
+PRODUCT_PACKAGES += \
+	Basic \
+	Galaxy4 \
+	NoiseField \
+	PhaseBeam \
+	SoundRecorder \
+        VisualizationWallpapers \
+        VideoEditor \
+        VoiceDialer \
 	Welcome
-#    DSPManager \
-#    libcyanogen-dsp \
 
 PRODUCT_PACKAGES += \
 	busybox \
-	Torch \
 	Superuser \
 	su \
 #    PermissionsManager
 
-# raumzero
+# cyanogenmod
 PRODUCT_PACKAGES += \
-	LatinIME \
 	Trebuchet \
 	CMFileManager
+#    DSPManager \
+#    libcyanogen-dsp \
 
 # tools
 PRODUCT_PACKAGES += \
