@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
 	audio_effects.conf \
 	LiveWallpapers \
 	LiveWallpapersPicker \
-	PhotoTable
+	PhotoTable \
+	Welcome
 #    DSPManager \
 #    libcyanogen-dsp \
 
@@ -63,7 +64,6 @@ PRODUCT_PACKAGES += \
 # raumzero
 PRODUCT_PACKAGES += \
 	LatinIME \
-	Launcher2 \
 	Trebuchet \
 	CMFileManager
 
@@ -99,7 +99,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	openvpn
 
-
+# Proprietary
+PRODUCT_PACKAGES += \
+	ViPER4Android_FX \
+	ViPER4Android_XHifi \
+	LMTLauncher \
+	AutoHideSoftKeys
 
 # themes
 include vendor/raumzero/config/theme_chooser.mk

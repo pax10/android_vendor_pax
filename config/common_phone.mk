@@ -10,7 +10,7 @@ PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/data/ak/init.d/98frandom:data/ak/init.d/98frandom \
 	vendor/raumzero/prebuilt/common/data/ak/init.d/99zipalign:data/ak/init.d/99zipalign \
 	vendor/raumzero/prebuilt/common/data/ak/init.d/zram:data/ak/init.d/zram \
-	vendor/raumzero/prebuilt/common/etc/init.d/99zipalign:system/etc/init.d/98fq_codel \
+	vendor/raumzero/prebuilt/common/etc/init.d/98fq_codel:system/etc/init.d/98fq_codel \
 	vendor/raumzero/prebuilt/common/etc/init.d/950iosettings:system/etc/init.d/950iosettings
 
 
