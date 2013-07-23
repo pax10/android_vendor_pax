@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/raumzero/config/common.mk)
 
 # bring in all video files
-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+$(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
 
 # bravia3
 $(call inherit-product-if-exists, vendor/raumzero/config/bravia.mk)

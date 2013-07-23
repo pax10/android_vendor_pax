@@ -76,14 +76,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	Trebuchet \
 	CMFileManager
-#    DSPManager \
-#    libcyanogen-dsp \
+
+#DSPManager
+#libcyanogen-dsp
 
 # tools
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver \
 	SpareParts
-#    SpeakerProximity
+
+#SpeakerProximity
 
 PRODUCT_PACKAGES += \
 	e2fsck \
@@ -122,8 +124,11 @@ PRODUCT_PACKAGES += \
 include vendor/raumzero/config/theme_chooser.mk
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/raumzero/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/raumzero/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += \
+	vendor/raumzero/overlay/dictionaries
+
+PRODUCT_PACKAGE_OVERLAYS += \
+	ivendor/raumzero/overlay/common
 
 # bin
 PRODUCT_COPY_FILES += \
