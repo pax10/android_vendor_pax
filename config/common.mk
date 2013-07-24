@@ -74,8 +74,9 @@ PRODUCT_PACKAGES += \
 
 # cyanogenmod
 PRODUCT_PACKAGES += \
+	CMFileManager \
 	Trebuchet \
-	CMFileManager
+	VoicePlus
 
 #DSPManager
 #libcyanogen-dsp
