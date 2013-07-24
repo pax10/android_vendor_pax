@@ -47,4 +47,5 @@ service compcache /system/bin/handle_compcache
 service sysinit /system/bin/sysinit
     user root
     oneshot
+    disabled
 
