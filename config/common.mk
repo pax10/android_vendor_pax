@@ -2,7 +2,7 @@
 PRODUCT_BRAND ?= raumzero
 
 # use / build koush's Superuser
-#-include vendor/raumzero-priv/keys.mk
+-include vendor/raumzero-priv/keys.mk
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.raumzero.superuser
 
