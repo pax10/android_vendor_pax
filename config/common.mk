@@ -135,6 +135,10 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# SELinux filesystem labels
+PRODUCT_COPY_FILES += \
+	vendor/raumzero/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+
 # etc
 PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/etc/init.raumzero.rc:root/init.raumzero.rc
