@@ -45,5 +45,5 @@ if [ $LABELDATA = "1" ]; then
   $L "/data relabel complete"
   $L "/cache relabel starting..."
   restorecon -R /cache
-  $L "/cache relabel complete" 
+  $L "/cache relabel complete"
 fi
