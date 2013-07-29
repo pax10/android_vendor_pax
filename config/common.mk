@@ -1,4 +1,4 @@
-﻿PRODUCT_BRAND ?= raumzero
+﻿include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 # use / build koush's Superuser
 -include vendor/raumzero-priv/keys.mk
@@ -9,7 +9,8 @@ SUPERUSER_PACKAGE_PREFIX := com.android.settings.raumzero.superuser
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.root_access=3
 
-# overrides general
+
+# general overrides
 PRODUCT_PROPERTY_OVERRIDES += \
 	keyguard.no_require_sim=true \
 	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -20,26 +21,51 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.dateformat=MM-dd-yyyy \
 	ro.com.android.dataroaming=false
 
-# overrides rz
+# rZ overrides
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.nocheckin=1 \
+	ro.kernel.android.checkjni=0 \
+	ro.kernel.checkjni=0 \
 	ro.max.fling_velocity=12000 \
 	ro.min.fling_velocity=8000 \
 	pm.sleep_mode=1 \
+	debug.sf.hw=1 \
+	persist.sys.ui.hw=1 \
 	debug.performance.tuning=1 \
+	video.accelerate.hw=1 \
+	debug.egl.profiler=1 \
+	debug.egl.hw=1 \
+	debug.composition.type=gpu \
 	persist.sys.purgeable_assets=1 \
 	ro.ril.disable.power.collapse=0 \
 	ro.config.hw_fast_dormancy=1 \
-	dalvik.vm.execution-mode=int:jit \
 	windowsmgr.max_events_per_sec=512 \
-	dalvik.vm.dexopt-flags=m=y,v=n,o=v
-
-# overrides testing
-PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.lockprof.threshold=850 \
+	profiler.force_disable_err_rpt=1 \
+	profiler.force_disable_ulog=1 \
+	ro.ril.enable.amr.wideband=1 \
+	ro.zram.default=18 \
 	persist.sys.purgeable_assets=1 \
-	persist.sys.use_dithering=0 \
-	dalvik.vm.verify-bytecode=false
+	persist.sys.strictmode.disable=1 \
+	debug.sf.hw = 1 \
+	persist.service.zram=1
+
+# usb
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.service.adb.enable=1 \
+	persist.sys.usb.config=mtp,adb
+
+
+# dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.heapsize=512m \
+	dalvik.vm.heapmaxfree=16m \
+	dalvik.vm.heapminfree=512k \
+	dalvik.vm.heapstartsize=32m \
+	dalvik.vm.heapgrowthlimit=256m \
+	dalvik.vm.execution-mode=int:jit \
+	dalvik.vm.lockprof.threshold=850 \
+	dalvik.vm.verify-bytecode=false \
+	dalvik.vm.dexopt-flags=m=y,v=n,o=v
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -63,20 +89,31 @@ PRODUCT_COPY_FILES += \
 
 # raumzero-specific init file
 PRODUCT_COPY_FILES += \
-	vendor/raumzero/prebuilt/common/etc/init.local.rc:root/init.raumzero.rc
+	vendor/raumzero/prebuilt/common/etc/init.local.rc:root/init.raumzero.rc \
+	vendor/raumzero/prebuilt/common/etc/init.local.sh:system/etc/init.raumzero.sh
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/bin/compcache:system/bin/compcache \
-	vendor/raumzero/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
+	vendor/raumzero/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache \
+	vendor/raumzero/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
 	vendor/raumzero/proprietary/Term.apk:system/app/Term.apk \
 	vendor/raumzero/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
+# initd
+PRODUCT_COPY_FILES += \
+	vendor/raumzero/prebuilt/common/etc/init.d/01bomb:system/etc/init.d/01bomb \
+	vendor/raumzero/prebuilt/common/etc/init.d/91zipalign:system/etc/init.d/91zipalign
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
+	vendor/raumzero/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+	vendor/raumzero/prebuilt/common/xbin/sysro:system/xbin/sysro \
+	vendor/raumzero/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+	vendor/raumzero/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
 	vendor/raumzero/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
 	vendor/raumzero/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 

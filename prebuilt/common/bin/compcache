@@ -1,7 +1,6 @@
 #!/system/bin/sh
 #
 # Compcache manager
-# shade@chemlab.org (cyanogen)
 #
 
 isramzswap="$(find /system/lib/modules/ -name ramzswap.ko 2>/dev/null)"
@@ -50,4 +49,3 @@ case "$1" in
 esac
 
 exit 0
-
