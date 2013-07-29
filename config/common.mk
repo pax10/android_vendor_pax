@@ -1,8 +1,10 @@
-﻿include $(call all-subdir-makefiles,$(LOCAL_PATH))
+﻿PRODUCT_BRAND ?= raumzero
 
 # use / build koush's Superuser
 -include vendor/raumzero-priv/keys.mk
+
 SUPERUSER_EMBEDDED := true
+
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.raumzero.superuser
 
 # give root access
@@ -161,15 +163,13 @@ PRODUCT_PACKAGES += \
 	SoundRecorder \
 	VisualizationWallpapers \
 	VideoEditor \
-	VoiceDialer \
-	Welcome
+	VoiceDialer
 
 # more optinal packages
 PRODUCT_PACKAGES += \
 	Calendar \
 	QuickSearchBox \
 	SmartCardService \
-	Welcome \
 	busybox \
 	Superuser \
 	su
