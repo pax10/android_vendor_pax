@@ -1,5 +1,4 @@
-﻿# Nmap
-PRODUCT_COPY_FILES +=  \
+﻿PRODUCT_COPY_FILES +=  \
 	vendor/raumzero/prebuilt/common/data/data/jackpal.androidterm/nmap/bin/ncat:data/data/jackpal.androidterm/nmap/bin/ncat \
 	vendor/raumzero/prebuilt/common/data/data/jackpal.androidterm/nmap/bin/ndiff:data/data/jackpal.androidterm/nmap/bin/ndiff \
 	vendor/raumzero/prebuilt/common/data/data/jackpal.androidterm/nmap/bin/nmap:data/data/jackpal.androidterm/nmap/bin/nmap \
