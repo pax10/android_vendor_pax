@@ -100,11 +100,6 @@ PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache \
 	vendor/raumzero/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Terminal Emulator
-PRODUCT_COPY_FILES +=  \
-	vendor/raumzero/proprietary/Term.apk:system/app/Term.apk \
-	vendor/raumzero/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
-
 # initd
 PRODUCT_COPY_FILES += \
 	vendor/raumzero/prebuilt/common/etc/init.d/01bomb:system/etc/init.d/01bomb \
@@ -140,6 +135,9 @@ PRODUCT_COPY_FILES += \
 
 # T-Mobile theme engine
 include vendor/raumzero/config/themes_common.mk
+
+# Nmap
+-include vendor/raumzero/config/nmap.mk
 
 # packages
 PRODUCT_PACKAGES += \
